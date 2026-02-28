@@ -1,0 +1,96 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f6f7fb;
+  background: #111;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.page {
+  min-height: 100vh;
+  padding: 16px;
+  background: linear-gradient(135deg, #121212, #202020);
+}
+
+header { display: flex; gap: 16px; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+h1 { margin: 0; font-size: 22px; }
+
+.tabs { display: flex; gap: 8px; margin-bottom: 12px; }
+button {
+  background: #1f3f76;
+  color: #fff;
+  border: 1px solid #2f67c7;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.panel {
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.tab1 { background: #000; }
+.tab2 { background: #4d4d4d; }
+.tab3 { background: #f5f5f5; color: #111; }
+.tab3 textarea,
+.tab3 pre {
+  color: #c3cad4;
+  background: #10141a;
+  border-color: #2b3444;
+}
+
+label { font-weight: 600; }
+
+textarea, input, select {
+  width: 100%;
+  background: #101010;
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+pre {
+  background: #080808;
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 6px;
+  padding: 8px;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.transcript {
+  min-height: 280px;
+  max-height: 420px;
+  overflow: auto;
+  background: #080808;
+  border: 1px solid #666;
+  border-radius: 6px;
+  padding: 8px;
+  white-space: pre-wrap;
+  font-family: "Consolas", "Courier New", monospace;
+}
+
+.prompt-form {
+  border: 2px solid #666;
+  border-radius: 8px;
+  padding: 8px;
+  background: #3e3e3e;
+}
+
+.memory, .draft { min-height: 180px; max-height: 300px; overflow: auto; }
+.agent-grid { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.agent-card { border: 2px solid; padding: 8px; border-radius: 8px; display: grid; gap: 6px; }
+.agent-picker { display: flex; flex-wrap: wrap; gap: 8px; }
+.error { color: #ff7f7f; }
+
+@media (max-width: 700px) {
+  .page { padding: 10px; }
+}
