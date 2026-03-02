@@ -37,6 +37,26 @@ The implemented MVP includes:
 - Docker-based local development environment
 - Minimal unit test coverage for key MVP behaviors
 
+## Screenshots
+
+### Tab1 Setup
+
+![Tab1 setup](docs/images/Tab1-setup.png)
+
+Defines the world, current chapter, and the active character roster for the session.
+
+### Tab2 Play Loop
+
+![Tab2 play loop](docs/images/Tab2-play-loop.png)
+
+Shows the GM-driven interaction loop, color-coded agent transcript, and active prompt panel.
+
+### Tab3 Memory and Draft Output
+
+![Tab3 memory and draft](docs/images/Tab3-memory-draft.png)
+
+Displays append-only structured memory, narrative-agent controls, and generated chapter output.
+
 ## Architecture
 
 This project follows the monorepo structure defined in the spec:
@@ -59,6 +79,8 @@ story-engine/
     app/
     migrations/
     tests/
+  docs/
+    images/
   frontend/
     src/
   shared/
